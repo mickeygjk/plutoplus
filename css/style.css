@@ -1,22 +1,64 @@
+#main {
+  position: absolute;
+  height: calc( 100% - 88px);
+  width: 100%;
+  margin-top: 88px;
+  font-family: 'Lato';
+}
+
 #map {
+  top: 0;
+  right: 355px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+
+#sidebar {
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  width: 355px;
+  padding: 16px;
 }
-.List-blocks {
-  padding-top: 104px;
+
+.checkbox {
+  display: inline-block;
 }
+
 .List-blocks > li {
-  border-bottom: 1px solid #e5e5e5;
+  /*border-bottom: 1px solid #e5e5e5;*/
 }
 .button--small > a {
   padding: 10px;
   min-width: 90px;
 }
-.button > a {
-  padding: 13px 26px;
+
+.btn.disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
+
+.columns-pane {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding-top: 164px;
+  padding-bottom: 104px;
+}
+
+.download-pane {
+  position: absolute;
+  bottom: 0;
+}
+
+.download-pane p {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
 .HeaderFixed--blue {
   background: #0090D7
 }
@@ -81,10 +123,7 @@ a:hover {
   z-index: 2;
   pointer-events: none;
 }
-.leaflet-control-container .leaflet-top {
-  top: 108px;
-  left: 14px;
-}
+
 .leaflet-draw {
   right: 24px;
 }
@@ -98,6 +137,11 @@ a:hover {
   background: rgba(0, 0, 0, .8);
   z-index: 1000;
 }
+
+#modal.hidden {
+  opacity:0;
+}
+
 .modal-inner {
   width: 45%;
   background: #fff;
@@ -110,9 +154,6 @@ a:hover {
   bottom: 24px;
 }
 
-#sidebar {
-  min-height: 800px;
-}
 .icon-right {
   font-size: 17px;
   color: #7AB06B;
@@ -132,6 +173,8 @@ a:hover {
 
 #infoWindow {
   position: absolute;
+  top:0;
+  right:0;
   padding: 12px;
   color: #fff;
   font-size: 12px;
@@ -142,7 +185,7 @@ a:hover {
   border-radius: 4px;
   z-index: 1000;
   width: 200px;
-  display:none;
+  /*display:none;*/
 }
 #infoWindow:before {
   content:"";
@@ -153,6 +196,10 @@ a:hover {
   border-right: 6px solid rgba(0, 0, 0, .8);
   left: -12px;
   top: 12px;
+}
+
+.tooltip {
+  max-width: 200px;
 }
 
 .sidebar-cell {
@@ -172,7 +219,8 @@ a:hover {
 }
 
 .button {
-  padding-bottom: 6px;
+    padding-right: 6px;
+    padding-bottom: 6px;
 }
 
 .ListOptions>li {
